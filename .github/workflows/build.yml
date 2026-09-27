@@ -1,0 +1,33 @@
+name: build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-kernel:
+    name: build kernel
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        uses: dabao1955/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/reravn/android_kernel_xiaomi_mt6781
+          kernel-branch: lineage-23.2
+          android-version: 16
+          aosp-clang-version: r547379
+          aosp-gcc: true
+          aosp-clang: true
+          depth: 1
+          ksu: true
+          ksu_other: true
+          ksu_url: https://github.com/ReSukiSU/ReSukiSU
+          bbg: true
+          nomount: true
+          ccache: true
+          config: custom_fleur_defconfig
+          arch: arm64
+          anykernel3: true
+          anykernel3_url: https://github.com/reravn/AnyKernel3
