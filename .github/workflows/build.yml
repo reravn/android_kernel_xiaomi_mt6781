@@ -23,10 +23,9 @@ jobs:
           ksu: true
           ksu-other: true
           ksu-url: https://github.com/ReSukiSU/ReSukiSU
-          bbg: true
           nomount: true
           ccache: true
           config: custom_fleur_defconfig
           arch: arm64
           anykernel3: true
-          anykernel3_url: https://github.com/reravn/AnyKernel3
+          anykernel3-url: https://github.com/reravn/AnyKernel3
